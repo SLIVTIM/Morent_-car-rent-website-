@@ -1,0 +1,128 @@
+:root {
+    --light-gray: rgb(202, 202, 202);
+}
+
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+}
+
+.website-title-wrapper {
+    margin-left: 2.5%;
+
+    & h1 {
+        font-family: sans-serif;
+        color: #3563E9;
+        margin: 0px;
+        font-size: 40px;
+    }
+}
+
+.seach_bar_wrapper {
+    height: 44px;
+    width: 22%;
+    display: flex;
+    align-items: center;
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 10px var(--light-gray);
+    border-radius: 50px;
+    margin-left: 10%;
+    transition: 0.4s;
+
+    
+    & .search_icon {
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+
+    & .search_input {
+        border: none;
+        width: 72%;
+        outline: none;
+        font-size: 16px;
+    }
+
+    & .search_filter_icon {
+        margin-left: 15px;
+    }
+
+}
+
+.seach_bar_wrapper:hover {
+    box-shadow: 0px 0px 20px gray
+}
+
+.user-stuff-wrapper {
+    display: flex;
+    margin-left: 40%;
+    gap: 20px;
+
+    & .user_stuff_svg {
+        box-shadow: 0px 0px 10px var(--light-gray);
+        transition: 0.4s;
+
+        & img {
+            transition: 0.4s;   
+        }
+    }
+
+    & .user_stuff_svg:hover {
+        box-shadow: 0px 0px 20px gray;
+
+        & img {
+            transform: scale(110%);
+        }
+    }
+
+    & .favourite_svg_wrapper {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & img {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    & .notification_svg_wrapper {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & img {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    & .setting_svg_wrapper {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        & img {
+            width: 24px;
+            height: 24px;
+        }
+        
+        
+    }
+}
+
+.user_profile_icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+}
