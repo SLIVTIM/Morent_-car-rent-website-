@@ -1,6 +1,6 @@
 import './App.css'
 import Header from './components/header/Header'
-import Hero from './components/hero/Hero'
+import MainPage from './pages/main/Main'
 
 function App() {
 
@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <Header/>
-      <Hero/>
+      <MainPage/>
     </>
   )
 }

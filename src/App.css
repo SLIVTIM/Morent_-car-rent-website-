@@ -1,0 +1,13 @@
+:root {
+    --light-gray: rgb(202, 202, 202);
+    --page-background-col: #F6F7F9;
+    --main-lighter-col: #54A6FF;
+    --main-col: #3563E9;
+    --main-hover-col: #2850c9; 
+    --main-lighter-hover-col: rgb(75, 140, 209);
+    --dot-border-col: rgba(255, 255, 255, 0.6);
+}
+
+body {
+    background-color: var(--page-background-col);
+}

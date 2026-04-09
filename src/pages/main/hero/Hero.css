@@ -1,0 +1,317 @@
+
+.banners-wrapper {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 88px;
+    width: 100%;
+}
+
+.banner-each-radius {
+    border-radius: 10px;
+}
+
+.banner-left {
+    background-color: var(--main-lighter-col);
+    width: 40%;
+    height: 400px;
+}
+
+.banner-right {
+    background-color: var(--main-col);
+    width: 40%;
+    height: 400px;
+}
+
+.visual_background_ellipse {
+
+
+    & .ellipse {
+        position: absolute;
+        background-color: transparent;
+        border: 24px solid white;
+        border-radius: 50%;
+        opacity: 0.08;
+    }
+    & .ellipse-one {
+        top: 110px;
+        left: 50px;
+        width: 800px;
+        height: 800px;
+    }
+
+    & .ellipse-two {
+        top: 175px;
+        left: 125px;
+        width: 650px;
+        height: 650px;
+    }
+
+    & .ellipse-three {
+        top: 250px;
+        left: 200px;
+        width: 500px;
+        height: 500px;
+    }
+
+    & .ellipse-four {
+        top: 325px;
+        left: 275px;
+        width: 350px;
+        height: 350px;
+    }
+
+    & .ellipse-five {
+        top: 400px;
+        left: 350px;
+        width: 200px;
+        height: 200px;
+    }
+
+    & .ellipse-six {
+        top: 460px;
+        left: 412.5px;
+        width: 75px;
+        height: 75px;
+    }
+}
+
+.visual_background_chevron_arrows {
+    display: flex;
+    flex-direction: column;
+}
+
+.arrow-container {
+    z-index: 1;
+    display: flex;
+    height: 133.3px; 
+    width: 100%;
+    background-color: var(--main-col); 
+    gap: 30px;
+}
+
+.arrow-container:nth-of-type(odd) {
+    & .arrow-stripe {
+        width: 130px; 
+        height: 100%;
+        background-color: white;
+        opacity: 0.08;
+        
+        clip-path: polygon(0% 0%, 60% 0%, 100% 50%, 60% 100%, 0% 100%, 40% 50%); 
+    }
+}
+
+.arrow-container:nth-of-type(2) {
+    & .arrow-stripe:nth-of-type(1) {
+        margin-left: 77px;
+    }
+    
+    & .arrow-stripe {
+        width: 130px; 
+        height: 100%;
+        background-color: white;
+        opacity: 0.08;
+        
+        clip-path: polygon(0% 0%, 60% 0%, 100% 50%, 60% 100%, 0% 100%, 40% 50%); 
+    }
+}
+
+.banner-text-wrapper {
+    position: absolute;
+    z-index: 2;
+    & h2 {
+        font-family: sans-serif;
+        color: white;
+        font-size: 32px;
+        width: 300px;
+        line-height: 35px;
+        margin-bottom: 40px;
+    }
+
+    & p {
+        font-family: sans-serif;
+        font-size: 18px;
+        color: white;
+        width: 300px;
+        line-height: 22px;
+    }
+
+    & button {
+        margin-top: 10px;
+        border: none;
+        border-radius: 4px;
+        width: 120px;
+        height: 44px;
+        color: white;
+        font-family: sans-serif;
+        font-size: 16px;
+        letter-spacing: 0.4px;
+        word-spacing: 0.5px;
+        transition: 0.2s;
+    }
+
+    & button:hover {
+        font-size: 17px;
+        transform: scale(104%);
+    }
+}
+
+.banner-left-text-wrapper {
+
+    top: 200px; 
+    margin-left: 30px; 
+
+    & button {
+        background-color: var(--main-col);
+    }
+
+    & button:hover {
+        background-color: var(--main-hover-col);
+    }
+}
+
+.banner-right-text-wrapper {
+    top: 200px;
+    margin-left: 30px;
+
+    & button {
+        background-color: var(--main-lighter-col);
+    }
+    
+    & button:hover {
+        background-color: var(--main-lighter-hover-col);
+    }
+}
+
+.left-banner-car-img {
+    top: 460px;
+    left: 420px;
+    position: absolute;
+    z-index: 2;
+}
+
+.right-banner-car-img {
+    top: 460px;
+    right: 270px;
+    position: absolute;
+    z-index: 2;
+}
+
+.pick-up-drop-off-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    height: 140px;
+    width: 100%;
+    gap: 50px;
+}
+
+.pick-up-drop-off-article {
+    width: 38%;
+    height: 132px;
+    background-color: white; 
+    box-shadow: 0px 0px 20px var(--light-gray);
+    border-radius: 10px;
+    z-index: 1;
+
+    & .pick-up-drop-off-title-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-left: 8%;
+        margin-top: 2.4%;
+
+        & .pick-up-dot {
+            width: 10px;
+            height: 10px;
+            background-color: var(--main-col);
+            border: 4px solid var(--dot-border-col);
+
+            border-radius: 50%;
+        }
+
+        & h3 {
+            font-family: Calibri, sans-serif;
+            font-size: 24px;
+            margin: 0px;
+        }
+    }
+
+    & .pick-up-drop-off-option-wrapper {
+        display: flex;
+        margin-left: 7.6%;
+        gap: 70px;
+        margin-top: 18px;
+
+        & .pick-up-drop-off-option-devider {
+            width: 2px;
+            height: 60px;
+            background-color: var(--light-gray);
+            margin-top: -10px;
+        }
+        
+        & div {
+            & h4 {
+                font-family: sans-serif;
+                margin-left: 4px;
+                margin-bottom: 5px;
+                margin-top: 0px;
+            }
+
+            & select, input {
+                color: gray;
+                outline: none;
+                border: none;
+            }
+        }
+
+        & div:nth-of-type(5) {
+            & h4 {
+                margin-left: 1px;
+            }
+        }
+    }
+}
+
+.switch-info-button {
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--main-col);
+    transition: 0.2s;
+
+    & img {
+        width: 24px;
+        height: 24px;
+        transition: 0.2s;
+    }
+}
+
+.switch-info-button:hover {
+    animation: switch-button-container-animation 0.5s linear alternate 1;
+    background-color: var(--main-hover-col);
+
+    & img {
+        animation: switch-button-svg-animation 0.5s linear alternate 1;
+    }
+}
+
+@keyframes switch-button-container-animation {
+    0% { transform: translateY(0px); }
+    25% { transform: translateY(-10px);}
+    50% { transform: translateY(-6px);}
+    75% { transform: translateY(-10px);}
+    100% { transform: translateY(0px);}
+}
+
+@keyframes switch-button-svg-animation {
+    0% { transform: scale(100%);}
+    25% { transform: scale(120%);}
+    50% { transform: scale(110%);}
+    75% { transform: scale(120%);}
+    100% { transform: scale(100%);}
+}
+
