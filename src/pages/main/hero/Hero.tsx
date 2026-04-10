@@ -2,6 +2,7 @@ import './Hero.css'
 import Koenigsegg_img from './../../../assets/hero/Koenigsegg.avif'
 import Nissan_GT_R_img from './../../../assets/hero/Nissan_GT-R.avif'
 import swap_svg from './../../../assets/hero/swap.svg'
+import DefaultButton from './../../../components/button/DefaultButton'
 
 function Hero() {
 
@@ -32,7 +33,7 @@ function Hero() {
                     <div className='banner-text-wrapper banner-left-text-wrapper'>
                         <h2>The Best Platform for Car Rental</h2>
                         <p>Ease of doing a car rental safely and reliably. Of course at a low price.</p>
-                        <button>Rental Cars</button>
+                        <DefaultButton text="Rental Cars"/>
                     </div>
                     <img src={Koenigsegg_img} alt="Koenigsegg_image" className='left-banner-car-img'/>
                 </article>
@@ -62,7 +63,7 @@ function Hero() {
                     <div className='banner-text-wrapper banner-right-text-wrapper'>
                         <h2>Easy way to rent a car at a low price</h2>
                         <p>Providing cheap car rental services and safe and comfortable facilities.</p>
-                        <button>Rental Cars</button>
+                        <DefaultButton text="Rental Cars"/>
                     </div>
                     <img src={Nissan_GT_R_img } alt="Nissan_GT-R_image" className='right-banner-car-img'/>
                 </article>

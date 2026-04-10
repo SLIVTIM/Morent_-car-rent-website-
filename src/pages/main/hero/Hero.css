@@ -3,7 +3,7 @@
     margin-top: 100px;
     display: flex;
     justify-content: center;
-    gap: 88px;
+    gap: 120px;
     width: 100%;
 }
 
@@ -35,42 +35,42 @@
     }
     & .ellipse-one {
         top: 110px;
-        left: 50px;
+        left: 25px;
         width: 800px;
         height: 800px;
     }
 
     & .ellipse-two {
         top: 175px;
-        left: 125px;
+        left: 100px;
         width: 650px;
         height: 650px;
     }
 
     & .ellipse-three {
         top: 250px;
-        left: 200px;
+        left: 175px;
         width: 500px;
         height: 500px;
     }
 
     & .ellipse-four {
         top: 325px;
-        left: 275px;
+        left: 250px;
         width: 350px;
         height: 350px;
     }
 
     & .ellipse-five {
         top: 400px;
-        left: 350px;
+        left: 325px;
         width: 200px;
         height: 200px;
     }
 
     & .ellipse-six {
         top: 460px;
-        left: 412.5px;
+        left: 386.5px;
         width: 75px;
         height: 75px;
     }
@@ -138,21 +138,6 @@
 
     & button {
         margin-top: 10px;
-        border: none;
-        border-radius: 4px;
-        width: 120px;
-        height: 44px;
-        color: white;
-        font-family: sans-serif;
-        font-size: 16px;
-        letter-spacing: 0.4px;
-        word-spacing: 0.5px;
-        transition: 0.2s;
-    }
-
-    & button:hover {
-        font-size: 17px;
-        transform: scale(104%);
     }
 }
 
@@ -162,11 +147,11 @@
     margin-left: 30px; 
 
     & button {
-        background-color: var(--main-col);
+        background-color: var(--main-col) !important;
     }
 
     & button:hover {
-        background-color: var(--main-hover-col);
+        background-color: var(--main-hover-col) !important;
     }
 }
 
@@ -175,11 +160,11 @@
     margin-left: 30px;
 
     & button {
-        background-color: var(--main-lighter-col);
+        background-color: var(--main-lighter-col) !important;
     }
     
     & button:hover {
-        background-color: var(--main-lighter-hover-col);
+        background-color: var(--main-lighter-hover-col) !important;
     }
 }
 

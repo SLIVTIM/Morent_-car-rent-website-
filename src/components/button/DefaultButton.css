@@ -1,0 +1,19 @@
+.general-button {
+    border: none;
+    border-radius: 4px;
+    width: 120px;
+    height: 44px;
+    color: white;
+    font-family: sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    word-spacing: 0.5px;
+    transition: 0.2s;
+    background-color: var(--main-col);
+    cursor: pointer;
+}
+
+.general-button:hover {
+    font-size: 17px;
+    transform: scale(104%);
+}

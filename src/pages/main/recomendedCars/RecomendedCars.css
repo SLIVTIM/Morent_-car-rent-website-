@@ -1,0 +1,13 @@
+.recomended-cars-wrapper > button {
+    width: 164px;
+    height: 54px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 17px;
+}
+
+.recomended-cars-wrapper > button:hover {
+    background-color: var(--main-hover-col);
+    font-size: 18px;
+}
