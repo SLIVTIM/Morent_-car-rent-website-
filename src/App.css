@@ -11,3 +11,7 @@
 body {
     background-color: var(--page-background-col);
 }
+
+.display-none {
+    display: none;
+}
