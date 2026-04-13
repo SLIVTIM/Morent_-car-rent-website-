@@ -1,13 +1,14 @@
 .popular-cars-wrapper, .recomended-cars-wrapper {
     display: flex;
     flex-direction: column;
-    width: 88%;
+    width: 89.5%;
     justify-self: center;
     margin-top: 50px;
 
     & .selection-cars-top-part {
         display: flex;
         justify-content: space-between;
+        
 
         & h3 {
             margin-left: 40px;
@@ -42,11 +43,13 @@
 
         & .selection-cars-card-each {
             width: 320px;
-            height: 100%;
+            height: 373px;
             background-color: white;
             box-shadow: 0px 0px 10px var(--light-gray);
             border-radius: 10px;
             padding-bottom: 5px;
+            margin-top: 10px;
+            transition: 0.2s;
 
             & .selection-cars-card-top-part {
                 display: flex;
@@ -81,8 +84,12 @@
             }
 
             & .card-car-preview-image-container {
-                height: 105px;
-                
+                height: 150px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
                 & .card-car-preview {
                     width: 260px;
                     margin-top: 40px;
@@ -173,5 +180,10 @@
                 }
             }
         }
+
+        & .selection-cars-card-each:hover {
+            margin-top: 0px;
+        }
     }
 }
+

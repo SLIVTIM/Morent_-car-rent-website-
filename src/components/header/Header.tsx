@@ -5,12 +5,19 @@ import favourite_svg from './../../assets/header/favourites.svg'
 import notification_svg from './../../assets/header/notifications.svg'
 import setting_svg from './../../assets/header/settings.svg'
 import user_svg from './../../assets/header/user.svg'
+import { useNavigate } from 'react-router-dom'
 
 function Header() {
+    const navigate = useNavigate()
+
+    function handleTitleClick() {
+        navigate('/')
+    }
+
     return (
         <header className='header-wrapper'>
             <article className='website-title-wrapper'>
-                <h1>MORENT</h1>
+                <h1 onClick={handleTitleClick}>MORENT</h1>
             </article>
             <label className='seach_bar_wrapper'>
                 <img src={search_svg} alt="search_svg" className='search_icon'/>

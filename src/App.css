@@ -6,6 +6,31 @@
     --main-hover-col: #2850c9; 
     --main-lighter-hover-col: rgb(75, 140, 209);
     --dot-border-col: rgba(255, 255, 255, 0.6);
+    --error-msg-animation-start-col: #2353e0;
+    --error-msg-animation-end-col: #5378e7;
+}
+
+.Toastify__toast--error {
+    background-color: black !important;
+    border-radius: 8px;
+}
+
+.Toastify__toast--error .Toastify__toast-icon svg {
+    animation: error-svg-color-change 0.5s linear alternate infinite;
+}
+
+@keyframes error-svg-color-change {
+    0% { fill: var(--error-msg-animation-start-col) !important; }
+    100% { fill: var(--error-msg-animation-end-col) !important; }
+}
+
+.Toastify__toast--error .Toastify__progress-bar {
+    background-color: var(--main-col) !important;
+}
+
+.Toastify__toast--error {
+    color: #ffffff !important;
+    font-family:  sans-serif; 
 }
 
 body {

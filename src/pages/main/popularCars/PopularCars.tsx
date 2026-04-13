@@ -1,8 +1,6 @@
 import './PopularCars.css' 
 import DefaultButton from '../../../components/button/DefaultButton'
-
-interface carsData {
-}
+import { useNavigate } from 'react-router-dom'
 
 interface PopularCarsProps {
     favorite_off_svg: string,
@@ -14,6 +12,7 @@ interface PopularCarsProps {
     favoriteSwitch: () => void,
     carsData: {
         name: string,
+        year: string,
         type: string,
         color: string,
         popular: boolean,
@@ -33,6 +32,13 @@ interface PopularCarsProps {
 
 function PopularCars({carsData, favorite_off_svg, favorite_on_svg, fuel_svg, transmission_type_svg, people_amount_svg, favorite, favoriteSwitch }: PopularCarsProps) {
 
+    const navigate = useNavigate()
+
+    const handleCardClick = (name: String, year: string) => {
+        const nameSlug = name.toLowerCase().replace(/\s+/g, '-');
+        const yearSlug = year.toLowerCase().replace(/\s+/g, '-');
+        navigate(`/car/${nameSlug}-${yearSlug}`);        
+    }
 
     return (
         <section className='popular-cars-wrapper'>
@@ -41,7 +47,7 @@ function PopularCars({carsData, favorite_off_svg, favorite_on_svg, fuel_svg, tra
                 <h3>View All</h3>
             </div>
             <div className='selection-cars-cards-wrapper'>
-                {carsData.map((car) => (
+                {carsData.filter(car => car.popular).slice(0, 4).map((car) => (
                     <article className='selection-cars-card-each'>
                         <div className='selection-cars-card-top-part'>
                             <div>
@@ -72,11 +78,10 @@ function PopularCars({carsData, favorite_off_svg, favorite_on_svg, fuel_svg, tra
                                 <h3 className={car.priceTags.discount === true ? "" : "no-discount"}>{`${car.priceTags.currentPrice}$/`}<span>day</span></h3>
                                 <h4 className={car.priceTags.discount === true ? "" : "display-none"}>16</h4>
                             </div>
-                            <DefaultButton text="Rent Now"/>
+                            <DefaultButton text="Rent Now" onClick={() => handleCardClick(car.name, car.year)}/>
                         </div>
                     </article>
-                ))}
-                
+                ))}         
             </div>
         </section>
     )
