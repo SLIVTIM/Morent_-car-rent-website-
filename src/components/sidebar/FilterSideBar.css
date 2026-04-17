@@ -1,0 +1,107 @@
+.filter-side-bar {
+    display: flex;
+    flex-direction: column;
+    width: 13%;
+    transition: 0.2s;
+    margin-left: -10%;
+    border-radius: 8px;
+    padding-bottom: 10px;
+    background-color: white;
+
+    & .filter-content-wrapper {
+        display: flex;
+    }
+
+    & .filter-component-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-left: 24px;
+        
+        & h5 {
+            font-family: sans-serif;
+            color: var(--light-gray-darker);
+            letter-spacing: 0.5px;
+            margin-top: 40px;
+            margin-bottom: 10px;
+        }
+
+        & .max-price-slider {
+            accent-color: var(--main-col);
+            width: 80%;
+        }
+
+        & .max-price-slider:hover {
+            accent-color: var(--main-col);            
+        }
+
+        & .max-price-slider:focus {
+            accent-color: var(--main-col);
+        }
+
+        & h3 {
+            font-family: sans-serif;
+            letter-spacing: 0.2px;
+        }
+
+        & .filter-component-each {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+
+            & input {
+                height: 16px;
+                width: 16px;
+                margin-bottom: 4px;
+            }
+
+            & h3 {
+                word-spacing: -1px;
+            }
+
+            & p {
+                margin-left: 2px;
+                font-family: sans-serif;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+.side-bar-active {
+    transform: translateX(200px);
+}
+
+.side-bar-extender-visual {
+    height: 880px;
+    width: 5px;
+    background-color: white;
+    margin-left: 0px;
+    animation: side-bar-extender-constant-animation 2s linear infinite;
+    margin-top: 15px; 
+    transition: 0.2s;
+}
+
+.side-bar-extender {
+    height: 900px;
+    border-radius: 0px 8px 8px 0px;
+    width: 50px;
+    margin-left: 30px;
+    background-color: transparent;
+    z-index: 2;
+}
+
+.side-bar-extender:hover .side-bar-extender-visual {
+    animation: side-bar-extender-hover-animation 0.2s linear forwards;
+}
+
+
+@keyframes side-bar-extender-constant-animation {
+    0% {filter: drop-shadow(36px 0px 4px var(--main-col-darker)); }
+    50% {filter: drop-shadow(36px 0px 4px var(--main-col-lighter)); }
+    100% {filter: drop-shadow(36px 0px 4px var(--main-col-darker)); }
+}
+
+@keyframes side-bar-extender-hover-animation {
+    0% {filter: drop-shadow(36px 0px 4px var(--main-col-lighter)); }
+    100% {filter: drop-shadow(36px 0px 4px var(--main-col-solid)); }
+}

@@ -1,9 +1,11 @@
-
+import './CarDetails.css'
 
 function CarDetails() {
+    
+
     return (
         <>
-            nigger
+            
         </>
     )
 }

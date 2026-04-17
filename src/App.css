@@ -1,5 +1,7 @@
 :root {
     --light-gray: rgb(202, 202, 202);
+    --light-gray-darker: rgb(180, 180, 180);
+    --dark-gray: rgb(99, 99, 99);
     --page-background-col: #F6F7F9;
     --main-lighter-col: #54A6FF;
     --main-col: #3563E9;
@@ -8,6 +10,9 @@
     --dot-border-col: rgba(255, 255, 255, 0.6);
     --error-msg-animation-start-col: #2353e0;
     --error-msg-animation-end-col: #5378e7;
+    --main-col-lighter: #809ffc;
+    --main-col-darker: #2353e2;
+    --main-col-solid: rgb(0, 60, 255);
 }
 
 .Toastify__toast--error {

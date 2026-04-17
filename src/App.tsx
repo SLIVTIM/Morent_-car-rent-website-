@@ -1,6 +1,6 @@
 import './App.css'
 import Header from './components/header/Header'
-import MainPage from './pages/main/Main'
+import MainPage from './pages/mainPage/MainPage'
 import CarDetailsPage from './pages/carDetails/CarDetails'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'

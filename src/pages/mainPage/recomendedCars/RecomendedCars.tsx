@@ -2,6 +2,8 @@ import './RecomendedCars.css'
 import './../popularCars/PopularCars.css'
 import DefaultButton from '../../../components/button/DefaultButton'
 import { useNavigate } from 'react-router-dom'
+import { CarDataContext } from '../../../context/CarDataContext'
+import { useContext } from 'react'
 
 interface RecomendedCarsProps {
     favorite_off_svg: string,
@@ -11,29 +13,12 @@ interface RecomendedCarsProps {
     people_amount_svg: string,
     favorite: boolean,
     favoriteSwitch: () => void
-    carsData: {
-        name: string,
-        year: string,
-        type: string,
-        color: string,
-        popular: boolean,
-        previewImg: string,
-        carSpecifications: {
-            maxLiters: string,
-            transmissionType: string,
-            passengerCapacity: string
-        },    
-        priceTags: {
-            currentPrice: string,
-            oldPrice: string,
-            discount: boolean
-        }
-    }[]
 }
 
-function RecomendedCars({carsData, favorite_off_svg, favorite_on_svg, fuel_svg, transmission_type_svg, people_amount_svg, favorite, favoriteSwitch}: RecomendedCarsProps) {
+function RecomendedCars({favorite_off_svg, favorite_on_svg, fuel_svg, transmission_type_svg, people_amount_svg, favorite, favoriteSwitch}: RecomendedCarsProps) {
 
     const navigate = useNavigate()
+    const {carsData} = useContext(CarDataContext)
 
     const handleCardClick = (name: String, year: string) => {
         const nameSlug = name.toLowerCase().replace(/\s+/g, '-');
