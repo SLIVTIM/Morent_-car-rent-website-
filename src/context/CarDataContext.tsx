@@ -2,18 +2,36 @@ import { createContext, useEffect, useState, useMemo } from "react";
 import axios from "axios";
 import { toast } from 'react-toastify'
 
-interface Car {
+interface CarPerformance {
+    maxFuelInLiters: number
+    fuelType: string
+    transmissionType: string
+    horsePower: number
+    acceleration: string
+    driveTrain: string
+    engine: string
+}
+
+interface CarPractical {
+    seatingCapacity: number
+    luggageCapacity: string
+    doorCount: number
+}
+
+export interface Car {
+    id: number
     name: string
     year: string
     type: string
     color: string
     popular: boolean
     previewImg: string
+    detailedImages: string[]
     carSpecifications: {
-        maxLiters: string
-        transmissionType: string
-        passengerCapacity: number
+        performance: CarPerformance
+        practical: CarPractical
     }
+    features: string[]
     priceTags: {
         currentPrice: string
         oldPrice: string

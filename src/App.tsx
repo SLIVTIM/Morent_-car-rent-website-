@@ -1,5 +1,6 @@
 import './App.css'
 import Header from './components/header/Header'
+import Footer from './components/footer/Footer'
 import MainPage from './pages/mainPage/MainPage'
 import CarDetailsPage from './pages/carDetails/CarDetails'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
@@ -15,7 +16,7 @@ function App() {
         <Header/>
           <Routes>
             <Route path='/' element={<MainPage/>} />
-            <Route path='/car/:carName' element={<CarDetailsPage/>} />
+            <Route path='/car/:carSlug' element={<CarDetailsPage/>} />
           </Routes>
           <ToastContainer
             position='top-center'
@@ -25,6 +26,7 @@ function App() {
             pauseOnHover={false}
             theme="colored"
           />
+        <Footer/>
       </BrowserRouter> 
     </>
   )
