@@ -13,6 +13,12 @@
     --main-col-lighter: #809ffc;
     --main-col-darker: #2353e2;
     --main-col-solid: rgb(0, 60, 255);
+    --car-details-focused-img-bgr-corner-col: #c4c4c4;
+    --car-details-focused-img-bgr-corner-hover-col: #8a8a8a;
+    --car-details-focused-img-bgr-center-col: #55575c;
+    --car-details-features-swiper-bgr-corner-col: #e0e0e0;
+    --car-details-features-swiper-bgr-center-col: #d6d6d6;
+    --car-details-features-swiper-bgr-active-center-col: #a3a3a3;
 }
 
 .Toastify__toast--error {

@@ -2,7 +2,7 @@ import './Hero.css'
 import Koenigsegg_img from './../../../assets/hero/Koenigsegg.avif'
 import Nissan_GT_R_img from './../../../assets/hero/Nissan_GT-R.avif'
 import swap_svg from './../../../assets/hero/swap.svg'
-import DefaultButton from './../../../components/button/DefaultButton'
+import DefaultButton from './../../../components/button/defaultButton/DefaultButton'
 
 function Hero() {
 

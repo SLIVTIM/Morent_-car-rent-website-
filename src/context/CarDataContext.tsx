@@ -18,13 +18,23 @@ interface CarPractical {
     doorCount: number
 }
 
+interface CarReviews {
+    id: number
+    name: string
+    profileImg: string
+    rating: number
+    reviewMessage: string
+}
+
 export interface Car {
     id: number
     name: string
+    trim: string
     year: string
     type: string
     color: string
     popular: boolean
+    description: string
     previewImg: string
     detailedImages: string[]
     carSpecifications: {
@@ -32,6 +42,7 @@ export interface Car {
         practical: CarPractical
     }
     features: string[]
+    reviews: CarReviews[]
     priceTags: {
         currentPrice: string
         oldPrice: string

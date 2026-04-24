@@ -16,4 +16,5 @@
 .general-button:hover {
     font-size: 17px;
     transform: scale(104%);
+    background-color: var(--main-hover-col);
 }

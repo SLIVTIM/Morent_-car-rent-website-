@@ -147,14 +147,6 @@
 
     top: 200px; 
     margin-left: 30px; 
-
-    & button {
-        background-color: var(--main-col) !important;
-    }
-
-    & button:hover {
-        background-color: var(--main-hover-col) !important;
-    }
 }
 
 .banner-right-text-wrapper {
@@ -274,6 +266,7 @@
         width: 24px;
         height: 24px;
         transition: 0.2s;
+        margin-top: 4px;
     }
 }
 

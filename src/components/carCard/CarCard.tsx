@@ -1,10 +1,9 @@
 import './CarCard.css'
-import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import type { Car } from './../../context/CarDataContext'
-import DefaultButton from '../../components/button/DefaultButton'
-import favorite_off_svg from './../../assets/card/empty_heart.svg'
-import favorite_on_svg from './../../assets/card/red_heart.svg'
+import DefaultButton from './../../components/button/defaultButton/DefaultButton'
+import FavoriteButton from './../../components/button/favoriteButton/FavoriteButton'
+import PriceTag from './../../components/priceTags/priceTag'
 import fuel_svg from './../../assets/card/fuel.svg'
 import transmission_type_svg from './../../assets/card/transmission.svg'
 import people_amount_svg from './../../assets/card/people.svg'
@@ -15,12 +14,7 @@ interface carCardProps {
 }
 
 function CarCard({ car }: carCardProps) {
-    const [favorite, setFavorite] = useState(false)
     const navigate = useNavigate()
-
-    function favoriteSwitch() {
-        setFavorite(!favorite)
-    }
 
     const handleCardClick = (name: string, year: string) => {
         const nameSlug = name.toLowerCase().replace(/\s+/g, '-');
@@ -35,10 +29,10 @@ function CarCard({ car }: carCardProps) {
                     <h3>{car.name}</h3>
                     <h4>{car.type}</h4>
                 </div>
-                <img src={favorite ? favorite_on_svg : favorite_off_svg} alt="favorite svg" onClick={favoriteSwitch}/>
+                <FavoriteButton/>
             </div>
             <div className='card-car-preview-image-container'>
-            <img src={car.previewImg} alt="car preview image" className='card-car-preview'/>
+                <img src={car.previewImg} alt="car preview image" className='card-car-preview'/>
             </div>
             <div className='selection-cars-card-details'>
                 <div>
@@ -54,11 +48,8 @@ function CarCard({ car }: carCardProps) {
                     <h4>{`${car.carSpecifications.practical.seatingCapacity} people`}</h4>                            
                 </div>
             </div>
-            <div className='selection-cars-card-price-tags'>
-                <div>
-                    <h3 className={car.priceTags.discount === true ? "" : "no-discount"}>{`${car.priceTags.currentPrice}$/`}<span>day</span></h3>
-                    <h4 className={car.priceTags.discount === true ? "" : "display-none"}>16</h4>
-                </div>
+            <div className='cars-price-tags'>
+                <PriceTag carDiscount={car.priceTags.discount} carCurrentPrice={car.priceTags.currentPrice} carOldPrice={car.priceTags.oldPrice}/>
                 <DefaultButton text="Rent Now" onClick={() => handleCardClick(car.name, car.year)}/>
             </div>
         </article>
