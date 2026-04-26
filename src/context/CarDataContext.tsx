@@ -24,6 +24,7 @@ interface CarReviews {
     profileImg: string
     rating: number
     reviewMessage: string
+    date: string
 }
 
 export interface Car {

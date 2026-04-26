@@ -1,6 +1,6 @@
-import Hero from './hero/Hero'
-import PopularCarsSection from './popularCars/PopularCars'
-import RecomendedCarsSection from './recomendedCars/RecomendedCars'
+import Hero from './mainPageComponents/hero/Hero'
+import PopularCarsSection from './mainPageComponents/popularCars/PopularCars'
+import RecomendedCarsSection from './mainPageComponents/recomendedCars/RecomendedCars'
 
 function MainPage() {
 

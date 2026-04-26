@@ -16,10 +16,11 @@ interface carCardProps {
 function CarCard({ car }: carCardProps) {
     const navigate = useNavigate()
 
-    const handleCardClick = (name: string, year: string) => {
+    const handleCardClick = (name: string, trim:string, year: string) => {
         const nameSlug = name.toLowerCase().replace(/\s+/g, '-');
+        const trimSlug = trim.toLowerCase().replace(/\s+/g, '-');
         const yearSlug = year.toLowerCase().replace(/\s+/g, '-');
-        navigate(`/car/${nameSlug}-${yearSlug}`);        
+        navigate(`/car/${nameSlug}-${trimSlug}-${yearSlug}`);        
     }
 
     return (
@@ -50,7 +51,7 @@ function CarCard({ car }: carCardProps) {
             </div>
             <div className='cars-price-tags'>
                 <PriceTag carDiscount={car.priceTags.discount} carCurrentPrice={car.priceTags.currentPrice} carOldPrice={car.priceTags.oldPrice}/>
-                <DefaultButton text="Rent Now" onClick={() => handleCardClick(car.name, car.year)}/>
+                <DefaultButton text="Rent Now" onClick={() => handleCardClick(car.name, car.trim, car.year)}/>
             </div>
         </article>
     )

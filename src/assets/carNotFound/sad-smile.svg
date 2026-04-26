@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="137.681 142.423 223.793 223.378" width="223.793" height="223.378">
+  <style>
+    /* 1. Eye Blink: Scaling on Y axis from the center of each eye */
+    .eye {
+      transform-origin: center;
+      transform-box: fill-box; /* CRITICAL: Forces scale to happen from the eye's own center */
+      animation: blink 4s ease-in-out infinite;
+    }
+    
+    @keyframes blink {
+      0%, 90%, 100% { transform: scaleY(1); }
+      95% { transform: scaleY(0); } /* Flat "blink" state */
+    }
+
+    /* 2. Mouth Animation: Keeping your "Perfect" setup */
+    .animated-mouth {
+      stroke-dasharray: 150; 
+      stroke-dashoffset: 150;
+      animation: growAndDroop 3s ease-in-out infinite;
+      transform: scale(-1, -1);
+      transform-origin: 250px 290.162px;
+    }
+
+    @keyframes growAndDroop {
+      0% { 
+        stroke-dashoffset: 150; 
+        translate: 0 -10px;
+      }
+      40%, 100% { 
+        stroke-dashoffset: 0; 
+        translate: 0 0;
+      }
+    }
+  </style>
+
+  <ellipse class="eye" cx="217.5" cy="217.3" rx="13.267" ry="13.267" style="fill: rgb(53, 99, 233);"/>
+  <ellipse class="eye" cx="282.5" cy="217.3" rx="13.267" ry="13.267" style="fill: rgb(53, 99, 233);"/>
+  
+  <ellipse style="fill: none; stroke-width: 12px; stroke: rgb(53, 99, 233);" cx="250" cy="254.018" rx="105.42" ry="105.42"/>
+  
+  <path class="animated-mouth" 
+        d="M 205 275.162 C 220 315.162 280.001 315.162 295 275.162" 
+        stroke-width="12" 
+        stroke-linecap="round" 
+        fill="none"
+        style="stroke: rgb(53, 99, 233);" />
+
+  <rect x="137.681" y="142.423" width="223.793" height="223.378" style="fill: none;"/>
+</svg>

@@ -1,7 +1,7 @@
 import './PopularCars.css' 
-import CarCard from '../../../components/carCard/CarCard'
+import CarCard from '../../../../components/carCard/CarCard'
 import { useContext } from 'react'
-import { CarDataContext } from '../../../context/CarDataContext'
+import { CarDataContext } from '../../../../context/CarDataContext'
 
 function PopularCars() {
 

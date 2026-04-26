@@ -1,0 +1,120 @@
+.car-details-reviews-section {
+    border-radius: 20px;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    height: fit-content;
+    background-color: white;
+    padding-bottom: 30px;
+
+    & .car-details-reviews-title {
+        display: flex;
+        margin-top: 20px;
+        gap: 10px;
+
+        & h3 {
+            font-family: sans-serif;
+            font-size: 24px;
+            font-weight: 100;
+            margin-left: 20px;
+        }
+
+        & h4 {
+            font-family: sans-serif;
+            font-size: 20px;
+            background-color: var(--main-col);
+            border-radius: 10px;
+            width: 40px;
+            height: 30px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    & .car-details-reviews-wrapper {
+        margin-left: 20px;
+        margin-top: 40px;
+
+        & .car-details-review-each {
+            width: 98%;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            position: relative;
+            
+
+            & .car-details-review-user-info-wrapper {
+                display: flex;
+
+                & > img {
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                }
+
+                & .car-details-review-user-info-top-part {
+                    width: 100%;
+
+                    & .car-details-review-user-info-name-date {
+                        display: flex;
+                        margin-top: 2px;
+                        
+                        & h4 {
+                            font-family: sans-serif;
+                            width: 100px;
+                            margin-left: 20px;
+                        }
+
+                        & p {
+                            margin-left: 88.5%;
+                            font-family: sans-serif;
+                            font-size: 14px;
+                            color: gray;
+                        }
+                    }
+
+                    & .car-details-review-user-rating-wrapper {
+                        display: flex;
+                        align-items: center;
+                        margin-top: 10px;
+
+                        & img:first-of-type {
+                            margin-left: 95%;
+                        }
+
+                        & .empty-star {
+                            margin-top: 1px;
+                        }
+                    }
+                }
+            }
+
+            & .car-details-review-text {
+                font-family: 'soraLight', sans-serif;
+                margin-left: 52px;
+                margin-top: -10px;
+                position: absolute;
+                width: 90%;
+                overflow-wrap: break-word;
+                word-break: break-word;
+            }
+        }
+    }
+
+    & > h3 {
+        margin-top: 80px;
+        font-family: sans-serif;
+        font-weight: 100;
+        display: flex;
+        justify-self: center;
+        color: gray;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    & > h3:hover {
+        color: black;
+    }
+}

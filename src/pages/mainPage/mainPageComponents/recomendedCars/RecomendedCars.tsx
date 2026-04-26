@@ -1,9 +1,9 @@
 import './RecomendedCars.css'
 import './../popularCars/PopularCars.css'
 import { useState, useContext } from 'react'
-import DefaultButton from '../../../components/button/defaultButton/DefaultButton'
-import CarCard from '../../../components/carCard/CarCard'
-import { CarDataContext } from '../../../context/CarDataContext'
+import DefaultButton from '../../../../components/button/defaultButton/DefaultButton'
+import CarCard from '../../../../components/carCard/CarCard'
+import { CarDataContext } from '../../../..//context/CarDataContext'
 
 function RecomendedCars() {
 

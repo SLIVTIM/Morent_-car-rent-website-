@@ -6,4 +6,9 @@
     z-index: 1;
     cursor: pointer;
     position: absolute;
+    transition: 0.2s;
+}
+
+.favorite-button:hover {
+    transform: scale(105%);
 }

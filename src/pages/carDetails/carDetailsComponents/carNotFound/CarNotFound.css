@@ -1,0 +1,56 @@
+.car-not-found-wrapper {
+    margin-top: 60px;
+    padding-bottom: 100px;
+
+    & .car-not-found-go-back-wrapper {
+        display: flex;
+        align-items: center;
+        margin-left: 48px;
+        width: 150px;
+        justify-content: space-between;
+
+        & > svg {
+            transition: 0.2s;
+        }
+
+        & h2 {
+            font-family: sans-serif;
+            color: var(--main-col-darker);
+            font-size: 24px;
+            cursor: pointer;
+        }
+    }
+
+    & .car-not-found-go-back-wrapper:hover {
+        & > svg {
+            margin-left: -2px;
+        }
+    }
+
+    & .car-not-found-message-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+        margin-top: 50px;
+
+        & > img {
+            width: 240px;
+            margin-top: 50px;
+            animation: car-not-found-message-animation 1s linear alternate infinite;
+        }
+        
+        & > .car-not-found-message {
+            font-size: 40px;
+            color: black;
+            font-family: 'soraLight';
+            color: var(--main-col-solid);
+            animation: car-not-found-message-animation 1s linear alternate infinite;
+        }
+    }
+}
+
+@keyframes car-not-found-message-animation {
+   0% { margin-top: 0px; margin-bottom: 10px;}
+   100% { margin-top: 10px; margin-bottom: 0px;} 
+}

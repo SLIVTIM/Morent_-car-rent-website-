@@ -21,6 +21,15 @@
     --car-details-features-swiper-bgr-active-center-col: #a3a3a3;
 }
 
+@font-face {
+    font-family: 'soraLight';
+    src: url('./assets/fonts/soraLight.woff2') format('woff2'),
+         url('./assets/fonts/soraLight.woff') format('woff');
+         font-weight: normal;
+         font-style: normal;
+         font-display: swap;
+}
+
 .Toastify__toast--error {
     background-color: black !important;
     border-radius: 8px;
