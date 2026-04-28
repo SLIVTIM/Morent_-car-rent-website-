@@ -17,7 +17,7 @@ function CarReviews({currentCar}: CarReviewsProps) {
             </div>
             <div className='car-details-reviews-wrapper'>
                 {currentCar.reviews.map((review) => (
-                    <div className='car-details-review-each'>
+                    <div key={review.id} className='car-details-review-each'>
                         <div className='car-details-review-user-info-wrapper'>
                             <img src={userProfile} alt="user profile image" />
                             <div className='car-details-review-user-info-top-part'>

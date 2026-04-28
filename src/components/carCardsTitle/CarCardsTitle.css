@@ -1,0 +1,26 @@
+.selection-cars-top-part {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+
+    & h3 {
+        margin-left: 40px;
+        margin-right: 40px;
+        font-family: sans-serif;
+        color: black;
+        font-weight: 100;
+    }
+
+    & h3:nth-of-type(1) {
+        color: gray;
+    }
+
+    & h3:nth-of-type(2) {
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    & h3:nth-of-type(2):hover {
+        color: gray;
+    } 
+}

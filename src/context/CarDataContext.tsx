@@ -29,7 +29,8 @@ interface CarReviews {
 
 export interface Car {
     id: number
-    name: string
+    brand: string
+    model: string
     trim: string
     year: string
     type: string

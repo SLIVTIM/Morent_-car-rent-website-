@@ -16,18 +16,19 @@ interface carCardProps {
 function CarCard({ car }: carCardProps) {
     const navigate = useNavigate()
 
-    const handleCardClick = (name: string, trim:string, year: string) => {
-        const nameSlug = name.toLowerCase().replace(/\s+/g, '-');
+    const handleCardClick = (brand: string, model:string, trim:string, year: string) => {
+        const brandSlug = brand.toLowerCase().replace(/\s+/g, '-');
+        const modelSlug = model.toLowerCase().replace(/\s+/g, '-');
         const trimSlug = trim.toLowerCase().replace(/\s+/g, '-');
         const yearSlug = year.toLowerCase().replace(/\s+/g, '-');
-        navigate(`/car/${nameSlug}-${trimSlug}-${yearSlug}`);        
+        navigate(`/car/${brandSlug}-${modelSlug}-${trimSlug}-${yearSlug}`);        
     }
 
     return (
         <article className='selection-cars-card-each'>
             <div className='selection-cars-card-top-part'>
                 <div>
-                    <h3>{car.name}</h3>
+                    <h3>{car.brand} {car.model}</h3>
                     <h4>{car.type}</h4>
                 </div>
                 <FavoriteButton/>
@@ -51,7 +52,7 @@ function CarCard({ car }: carCardProps) {
             </div>
             <div className='cars-price-tags'>
                 <PriceTag carDiscount={car.priceTags.discount} carCurrentPrice={car.priceTags.currentPrice} carOldPrice={car.priceTags.oldPrice}/>
-                <DefaultButton text="Rent Now" onClick={() => handleCardClick(car.name, car.trim, car.year)}/>
+                <DefaultButton text="Rent Now" onClick={() => handleCardClick(car.brand, car.model, car.trim, car.year)}/>
             </div>
         </article>
     )

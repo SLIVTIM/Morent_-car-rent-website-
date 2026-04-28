@@ -5,7 +5,7 @@
     border-radius: 20px;
 
     & .car-details-info-wrapper-title {
-        margin-left: 40px;
+        margin-left: 30px;
         margin-top: 30px;
         
         & .car-details-info-title-top-part {
@@ -42,6 +42,33 @@
                 color: var(--dark-gray);
             }
         }
+
+        & .car-details-info-trim-changer {
+            top: 18.5%;
+            right: 8%;
+            width: 92px;
+            height: 32px;
+            border: 2px solid var(--main-col-solid); 
+            border-radius: 10px;
+            background-color: transparent;
+            position: absolute;
+            align-content: center;
+            justify-items: center;
+            animation: trim-button-flicker-none-hover 0.6s ease-in infinite alternate;
+            transition: 0.2s;
+
+            & h3 {
+                color: var(--main-col-solid);
+                font-family: 'soraLight';
+                font-size: 14px;
+                opacity: 1;
+            }
+        }
+
+        & .car-details-info-trim-changer:hover {
+            transform: scale(105%);
+            animation: trim-button-flicker-hover 0.6s ease-in infinite alternate;
+        }
     }
 
     & > p {
@@ -49,7 +76,7 @@
         font-size: 18px;
         color: gray;
         font-family: 'soraLight', sans-serif;
-        margin-left: 40px;
+        margin-left: 35px;
         margin-top: 40px;
         overflow-wrap: break-word;
         word-break: break-word;
@@ -61,13 +88,14 @@
         gap: 80px;
 
         & .car-details-specs-each-side {
-            margin-left: 40px;
+            margin-left: 35px;
 
             & .car-details-specs-each-spec-container {
                 display: flex;
                 gap: 10px;
                 margin-top: 30px;
                 align-items: center;
+                height: 32px;
 
                 & h4 {
                     font-family: sans-serif;
@@ -84,6 +112,10 @@
                     width: 32px;
                 }
             }
+        }
+
+        & .car-details-specs-each-side:nth-of-type(2) {
+            margin-left: 40px;
         }
     }
 
@@ -160,4 +192,14 @@
             font-size: 22px;
         }
     }
+}
+
+@keyframes trim-button-flicker-none-hover {
+    0% { opacity: 0.2;}
+    100% { opacity: 0.4;}
+}
+
+@keyframes trim-button-flicker-hover {
+    0% { opacity: 0.5;}
+    100% { opacity: 0.8;}    
 }

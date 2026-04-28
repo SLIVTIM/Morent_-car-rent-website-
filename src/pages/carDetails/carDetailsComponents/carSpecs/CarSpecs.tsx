@@ -21,9 +21,20 @@ import type { Car } from '../../../../context/CarDataContext'
 
 interface CarSpecsProps {
     currentCar: Car
+    carsData: Car[]
 }
 
-function CarSpecs({currentCar}: CarSpecsProps) {
+function CarSpecs({carsData, currentCar}: CarSpecsProps) {
+
+    const variants = carsData.filter(car => 
+        car.brand === currentCar.brand && 
+        car.model === currentCar.model &&
+        car.year === currentCar.year && 
+        car.id !== currentCar.id
+    )
+
+    const hasOtherTrims = variants.length > 0
+
     const calculatedAverageRating = () => {
         if (currentCar.reviews.length === 0) return 0
  
@@ -39,7 +50,7 @@ function CarSpecs({currentCar}: CarSpecsProps) {
         <div className='car-details-info-wrapper'>
             <div className='car-details-info-wrapper-title'>
                 <div className='car-details-info-title-top-part'>
-                    <h2>{currentCar.name} <span>({currentCar.year})</span></h2>
+                    <h2>{currentCar.brand} {currentCar.model} <span>({currentCar.year})</span></h2>
                     <FavoriteButton/>
                 </div>
                 <div className='car-details-info-title-bottom-part'> 
@@ -48,6 +59,9 @@ function CarSpecs({currentCar}: CarSpecsProps) {
                     ))}
                     <p>{currentCar.reviews.length}+ Reviewer</p>
                 </div>
+                {hasOtherTrims && <div className='car-details-info-trim-changer'>
+                    <h3>change Trim</h3>  
+                </div>}
             </div>
             <p className='car-details-paragraph'>{currentCar.description}</p>
             <div className='car-details-specs'>

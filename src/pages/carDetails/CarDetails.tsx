@@ -6,6 +6,7 @@ import CarImages from './carDetailsComponents/carImages/CarImages'
 import CarSpecs from './carDetailsComponents/carSpecs/carSpecs'
 import CarReviews from './carDetailsComponents/carReviews/CarReviews'
 import CarNotFound from './carDetailsComponents/carNotFound/CarNotFound'
+import OtherChoices from './carDetailsComponents/otherChoiceCars/otherChoicesCars'
 
 
 
@@ -14,7 +15,7 @@ function CarDetails() {
     const {carsData} = useContext(CarDataContext)
 
     const currentCar = carsData.find(car => {
-        const generatedSlug = `${car.name.toLowerCase().replace(/\s+/g, '-')}-${car.trim.toLowerCase().replace(/\s+/g, '-')}-${car.year.toLowerCase().replace(/\s+/g, '-')}`
+        const generatedSlug = `${car.brand.toLowerCase().replace(/\s+/g, '-')}-${car.model.toLowerCase().replace(/\s+/g, '-')}-${car.trim.toLowerCase().replace(/\s+/g, '-')}-${car.year.toLowerCase().replace(/\s+/g, '-')}`
         return generatedSlug === carSlug
     })
 
@@ -28,9 +29,10 @@ function CarDetails() {
             <section className='car-details-section'>
                 <article className='car-details-car-section'>
                     <CarImages detailedImages={currentCar.detailedImages}/>
-                    <CarSpecs currentCar={currentCar}/>
+                    <CarSpecs carsData={carsData} currentCar={currentCar}/>
                 </article>
                 <CarReviews currentCar={currentCar}/>
+                <OtherChoices />
             </section>
         </>
     )

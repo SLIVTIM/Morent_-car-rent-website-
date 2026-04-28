@@ -1,7 +1,7 @@
 import './FilterSideBar.css'
 import { useRef, useState } from 'react'
 import { useContext } from 'react'
-import { CarDataContext } from './../../context/CarDataContext'
+import { CarDataContext } from './../../../context/CarDataContext'
 
 function FilterSideBar() {
     const [maxPrice, setMaxPrice] = useState(100)
@@ -16,10 +16,10 @@ function FilterSideBar() {
     const CoupeCarCount = carsData.filter(car => car.type === "Coupe").length
     const HatchbackCarCount = carsData.filter(car => car.type === "hatchBack").length
 
-    const capacity2 = carsData.filter(car => car.carSpecifications.passengerCapacity === 2).length
-    const capacity4 = carsData.filter(car => car.carSpecifications.passengerCapacity === 4).length
-    const capacity6 = carsData.filter(car => car.carSpecifications.passengerCapacity === 6).length
-    const capacity7orMore = carsData.filter(car => car.carSpecifications.passengerCapacity === 7 || car.carSpecifications.passengerCapacity > 7).length
+    const capacity2 = carsData.filter(car => car.carSpecifications.practical.seatingCapacity === 2).length
+    const capacity4 = carsData.filter(car => car.carSpecifications.practical.seatingCapacity === 4).length
+    const capacity6 = carsData.filter(car => car.carSpecifications.practical.seatingCapacity === 6).length
+    const capacity7orMore = carsData.filter(car => car.carSpecifications.practical.seatingCapacity === 7 || car.carSpecifications.practical.seatingCapacity > 7).length
 
     function sideBarExtenderHoverEnterHandler() {
         sideBarVisualExtenderRef.current?.classList.add('slide-bar-extender-hover')   
